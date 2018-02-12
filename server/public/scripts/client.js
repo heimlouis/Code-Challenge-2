@@ -7,6 +7,7 @@ function onReady() {
     $('#addJokeButton').on('click', handleButtonClick);
     getJokes();
 }
+//add post
 
 function getJokes(){
     $.ajax({
@@ -20,5 +21,7 @@ function getJokes(){
             console.error('failure on the getJokes GET');
         },
     })
+
 //add display results
+
 }
