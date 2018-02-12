@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const joke = require('../modules/joke');
+const Joke = require('../modules/joke');
 
 let jokes = [
     {
