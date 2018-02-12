@@ -2,7 +2,7 @@ const express = require( 'express' );
 const app = express();
 const path = require( 'path' );
 const bodyParser = require( 'body-parser' );
-// const jokeRouter = require('./routes/joke.router');//this needs to be fixed
+// const jokeRouter = require('./routes/joke.router');//***** this needs to be fixed
 
 const port = process.env.PORT || 5000;
 
@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use('/jokes', jokeRouter); //this needs to be fixed
+// app.use('/jokes', jokeRouter); //****** this needs to be fixed
 
 // serve back static files
 app.use(express.static('server/public'));

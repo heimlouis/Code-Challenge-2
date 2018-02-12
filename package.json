@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/PrimeAcademy/CodeChallenge_2_Jokes/issues"
   },
-  "homepage": "https://github.com/PrimeAcademy/CodeChallenge_2_Jokes#readme"
+  "homepage": "https://github.com/PrimeAcademy/CodeChallenge_2_Jokes#readme",
+  "devDependencies": {}
 }
