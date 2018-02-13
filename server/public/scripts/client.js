@@ -4,7 +4,7 @@ $( document ).ready( onReady );
 
 function onReady() {
     console.log('DOM ready');
-    $('#addJokeButton').on('click', handleButtonClick);
+    $('#addJokeButton').on('click', addJokeButtonClick);
     getJokes();
 }
 //add post
@@ -15,12 +15,14 @@ function getJokes(){
         url: '/jokes',
         success: function(result){
             console.log('success on getJokes GET', result);
-            displayResults(result):  
+            displayResults(result); 
         },
         error: function(){
             console.error('failure on the getJokes GET');
         },
     })
+
+    
 
 //add display results
 

@@ -30,13 +30,25 @@ let jokes = [
     }
   ];
 
-router.post('/', (req, res) => {
-    console.log(req.body);
-    //**this will need to be added - const jokeObject = new jokes(whoesJoke, jokeQuestion, punchLine)
-    //**this will need to be added - console.log(jokeObject.result);
-    //**this will need to be added - history.push(jokeObject);
-    res.sendStatus(201);
+// router.post('/', (req, res) => {
+//     console.log(req.body);
+//     //**this will need to be added - const jokeObject = new jokes(whoesJoke, jokeQuestion, punchLine)
+//     //**this will need to be added - console.log(jokeObject.result);
+//     //**this will need to be added - history.push(jokeObject);
+//     res.sendStatus(201);
     
+// })
+
+router.post('/', (req, res) => {
+  console.log(req.body)
+  // look at request
+  const data = req.body;
+  //make a calculation object
+  const myJokeBread = new Joke(data.whoesJoke, data.jokeQuestion, data.punchLine);
+  console.log(myJokeBread.result);
+  //push to history
+  jokes.push(myJokeBread);
+  res.sendStatus(201);
 })
 
 router.get('/', (req, res) => {
